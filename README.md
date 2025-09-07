@@ -1,51 +1,76 @@
-# 🧮 Advanced Scientific Calculator
+# 🧮 React Scientific Calculator
 
-A beautiful, feature-rich scientific calculator built with React.js featuring a modern iOS-inspired design and comprehensive mathematical functions.
+> A beautiful, feature-rich scientific calculator built with React.js featuring modern iOS-inspired design and comprehensive mathematical functions.
 
-![Scientific Calculator](./public/calculator-preview.png)
+![Scientific Calculator](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![CSS3](https://img.shields.io/badge/CSS3-Modern-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+## 🌟 Live Demo
+🔗 **[Try the Calculator Live](https://react-scientific-calculator-saurabh.vercel.app)** (Coming Soon!)
 
 ## ✨ Features
 
-### 🔬 Scientific Functions
-- **Trigonometric Functions**: sin, cos, tan and their inverse functions
-- **Hyperbolic Functions**: sinh, cosh, tanh (via 2nd function)
+### 🧮 Mathematical Operations
+- **Basic Arithmetic**: Addition, Subtraction, Multiplication, Division
+- **Advanced Functions**: Powers (x², x³, xʸ), Roots (√x, ∛x, ʸ√x)
+- **Trigonometric Functions**: sin, cos, tan + inverse functions (sin⁻¹, cos⁻¹, tan⁻¹)
 - **Logarithmic Functions**: ln (natural), log (base-10), log₂ (base-2)
 - **Exponential Functions**: eˣ, 10ˣ, 2ˣ
-- **Power & Root Functions**: x², x³, xʸ, √x, ∛x, ʸ√x
-- **Advanced Functions**: x! (factorial), |x| (absolute), 1/x (reciprocal)
+- **Special Functions**: factorial (x!), absolute value (|x|), reciprocal (1/x)
 - **Mathematical Constants**: π (pi), e (Euler's number)
 
 ### 💾 Memory Operations
 - **MC** - Memory Clear
 - **MR** - Memory Recall
 - **M+** - Memory Add
-- **M-** - Memory Subtract
+- **M-** - Memory Subtract  
 - **MS** - Memory Store
 
 ### ⚙️ Smart Features
 - **Angle Unit Toggle**: Switch between Radians and Degrees
-- **2nd Function**: Access secondary mathematical functions
-- **Random Number Generator**: Generate random numbers
-- **Scientific Notation**: Automatic formatting for very large/small numbers
-- **Error Handling**: Robust error detection and user feedback
-- **Responsive Design**: Works seamlessly on all devices
+- **2nd Function Mode**: Access secondary mathematical functions
+- **Expression Display**: See your calculations as you type
+- **Error Handling**: Robust error detection with user-friendly messages
+- **Auto-Error Clear**: Errors automatically disappear after 2 seconds
+- **Keyboard Support**: Full keyboard navigation and shortcuts
 
-## 🚀 Live Demo
+## 🎨 Design Features
 
-[View Live Demo](https://your-username.github.io/react-scientific-calculator)
+### 🌈 Modern UI
+- **Gradient Background**: Beautiful animated color transitions
+- **Glassmorphism**: Translucent calculator with blur effects
+- **iOS-Style Buttons**: Rounded, elevated buttons with smooth animations
+- **Color-Coded Functions**: Intuitive color scheme for different operations
+- **Responsive Design**: Works perfectly on all devices
 
-## 🛠️ Technologies Used
+### 🎯 User Experience
+- **Smooth Animations**: 60fps button interactions and transitions
+- **Visual Feedback**: Hover states and press animations
+- **Status Indicators**: Clear display of current modes (RAD/DEG, Memory, 2nd)
+- **Professional Typography**: Clean, readable fonts and spacing
 
-- **React.js 18+** - Modern React with Hooks
-- **CSS3** - Advanced styling with gradients, animations, and grid
-- **JavaScript ES6+** - Modern JavaScript features
-- **Responsive Design** - Mobile-first approach
+## 🚀 Live Examples
 
-## 📦 Installation
+```javascript
+// Basic Math
+9 × 6 = 54
+(2 + 3) × 4 = 20
+
+// Scientific Functions  
+sin(π/2) = 1
+ln(e) = 1
+√16 + 3² = 13
+
+// Advanced Operations
+2π + e ≈ 9.28
+log(1000) = 3
+5! = 120
+```
+
+## 📦 Quick Start
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/react-scientific-calculator.git
+git clone https://github.com/CodelikeSaurabh/react-scientific-calculator.git
 
 # Navigate to project directory
 cd react-scientific-calculator
@@ -56,78 +81,94 @@ npm install
 # Start development server
 npm start
 
-# Open browser to http://localhost:3000
+# Open http://localhost:3000
 ```
 
 ## 🏗️ Project Structure
 
 ```
-react-scientific-calculator/
-├── public/
-│   ├── index.html
-│   ├── favicon.ico
-│   └── manifest.json
 ├── src/
 │   ├── components/
-│   │   ├── Calculator/
-│   │   │   ├── Calculator.js
-│   │   │   ├── Calculator.css
-│   │   │   └── index.js
-│   │   └── Common/
-│   │       └── ErrorBoundary.js
-│   ├── utils/
-│   │   ├── mathOperations.js
-│   │   └── constants.js
+│   │   └── Calculator/           # Main calculator component
 │   ├── hooks/
-│   │   └── useCalculator.js
-│   ├── App.js
-│   ├── App.css
-│   └── index.js
+│   │   └── useCalculator.js      # Calculator state management
+│   ├── utils/
+│   │   ├── constants.js          # Mathematical constants
+│   │   └── mathOperations.js     # Mathematical functions
+│   ├── App.js                    # Main app component
+│   └── index.js                  # Application entry point
+├── public/
 ├── README.md
-├── package.json
-└── .gitignore
+└── package.json
 ```
 
-## 🎨 Design Philosophy
+## 🔧 Built With
 
-This calculator follows modern design principles:
-- **Minimalist Interface**: Clean, uncluttered design
-- **Color Coding**: Intuitive color scheme for different function types
-- **Smooth Animations**: Subtle animations for better user experience
-- **Accessibility**: ARIA labels and keyboard navigation support
-- **Mobile-First**: Responsive design that works on all screen sizes
+- **React 18+** - Modern React with Hooks
+- **CSS3** - Advanced styling with gradients and animations
+- **JavaScript ES6+** - Modern JavaScript features
+- **Create React App** - Zero-configuration build setup
 
-## 🧪 Usage Examples
+## 📱 Browser Support
 
-### Basic Operations
-```javascript
-// Addition: 5 + 3 = 8
-// Subtraction: 10 - 4 = 6
-// Multiplication: 6 × 7 = 42
-// Division: 15 ÷ 3 = 5
+| Browser | Version |
+|---------|---------|
+| Chrome | ≥ 90 |
+| Firefox | ≥ 88 |
+| Safari | ≥ 14 |
+| Edge | ≥ 90 |
+
+## ⌨️ Keyboard Shortcuts
+
+| Key | Function |
+|-----|----------|
+| `0-9` | Number input |
+| `+, -, *, /` | Basic operations |
+| `Enter` or `=` | Calculate result |
+| `Escape` | All Clear (AC) |
+| `Backspace` | Clear (C) |
+| `.` | Decimal point |
+| `(, )` | Parentheses |
+
+## 🎯 Key Features Showcase
+
+### Expression Display
+See your calculations in real-time as you build complex expressions:
+```
+Input: 8 × 7
+Display: "8 × 7 = 56"
 ```
 
-### Scientific Functions
-```javascript
-// Trigonometry: sin(30°) = 0.5
-// Logarithms: ln(e) = 1
-// Powers: 2³ = 8
-// Roots: √16 = 4
+### Memory Functions
+Store and recall values for complex calculations:
+```
+42 → MS (Store)
+... other calculations ...
+MR → 42 (Recall)
 ```
 
-### Memory Operations
-```javascript
-// Store value: Press "MS" to store current display
-// Recall value: Press "MR" to recall stored value
-// Add to memory: Press "M+" to add current value to memory
+### Angle Mode Switching
+Toggle between radians and degrees for trigonometric functions:
 ```
+sin(90°) = 1    (DEG mode)
+sin(90) = 0.89  (RAD mode)
+```
+
+## 🚀 Performance
+
+- **Bundle Size**: < 500KB gzipped
+- **First Contentful Paint**: < 1s
+- **Time to Interactive**: < 2s
+- **Lighthouse Score**: 95+
 
 ## 🤝 Contributing
 
+Contributions are welcome! Please feel free to submit a Pull Request.
+
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
 ## 📄 License
@@ -137,22 +178,31 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Saurabh Kashyap**
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your Profile](https://linkedin.com/in/your-profile)
+- GitHub: [@CodelikeSaurabh](https://github.com/CodelikeSaurabh)
+- Portfolio: [Coming Soon]
 
 ## 🙏 Acknowledgments
 
 - Inspired by iOS Calculator design
 - Mathematical functions powered by JavaScript Math library
-- Icons and styling inspired by modern design trends
+- Modern design trends and UI patterns
+- React.js community for excellent documentation
 
-## 📈 Performance
+## 📸 Screenshots
 
-- **Bundle Size**: < 500KB
-- **First Paint**: < 1s
-- **Interactive**: < 2s
-- **Lighthouse Score**: 95+
+### Desktop View
+![Desktop Calculator](./docs/desktop-view.png)
+
+### Mobile View  
+![Mobile Calculator](./docs/mobile-view.png)
+
+### Scientific Functions
+![Scientific Functions](./docs/scientific-functions.png)
 
 ---
 
-⭐ If you found this project useful, please give it a star!
+⭐ **If you find this project useful, please give it a star!** ⭐
+
+---
+
+**Made with ❤️ by Saurabh**
