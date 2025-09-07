@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import ScientificCalculator from './components/Calculator';
+import ScientificCalculator from './components/Calculator/Calculator';
 import './App.css';
 
 /**
