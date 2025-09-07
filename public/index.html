@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#667eea" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Advanced Scientific Calculator built with React.js - Perform complex mathematical calculations with a beautiful, modern interface featuring trigonometric, logarithmic, and statistical functions." />
+    <meta name="keywords" content="scientific calculator, math calculator, react calculator, trigonometry, logarithms, mathematics, online calculator" />
+    <meta name="author" content="Saurabh Kashyap" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Scientific Calculator - Advanced React Calculator" />
+    <meta property="og:description" content="Professional scientific calculator with advanced mathematical functions, modern UI, and responsive design." />
+    <meta property="og:image" content="%PUBLIC_URL%/calculator-preview.png" />
+    <meta property="og:url" content="https://your-username.github.io/react-scientific-calculator" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Scientific Calculator - Advanced React Calculator" />
+    <meta property="twitter:description" content="Professional scientific calculator with advanced mathematical functions, modern UI, and responsive design." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/calculator-preview.png" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Preload key fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Favicon variations -->
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+    
+    <!-- Performance optimizations -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <title>Scientific Calculator - Advanced Mathematical Functions | React App</title>
+    
+    <!-- Critical CSS for faster loading -->
+    <style>
+      /* Prevent flash of unstyled content */
+      body {
+        margin: 0;
+        background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+      
+      /* Loading spinner */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-spinner"></div>
+    </div>
+    
+    <!-- Fallback for users with JavaScript disabled -->
+    <noscript>
+      <div style="text-align: center; padding: 50px; color: white; font-family: Arial, sans-serif;">
+        <h1>Scientific Calculator</h1>
+        <p>You need to enable JavaScript to run this calculator application.</p>
+        <p>Please enable JavaScript in your browser settings and refresh the page.</p>
+      </div>
+    </noscript>
+    
+    <!-- Main app container -->
+    <div id="root"></div>
+    
+    <!-- Remove loading screen when app loads -->
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => loadingScreen.remove(), 500);
+          }
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

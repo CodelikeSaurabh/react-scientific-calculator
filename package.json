@@ -1,0 +1,78 @@
+{
+  "name": "react-scientific-calculator",
+  "version": "1.0.0",
+  "description": "A beautiful, feature-rich scientific calculator built with React.js featuring a modern iOS-inspired design and comprehensive mathematical functions.",
+  "keywords": [
+    "react",
+    "calculator",
+    "scientific-calculator",
+    "mathematics",
+    "javascript",
+    "responsive-design",
+    "modern-ui"
+  ],
+  "author": {
+    "name": "Saurabh Kashyap",
+    "email": "saurabh@example.com",
+    "url": "https://github.com/your-username"
+  },
+  "license": "MIT",
+  "homepage": "https://your-username.github.io/react-scientific-calculator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/react-scientific-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/react-scientific-calculator/issues"
+  },
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "analyze": "npm run build && npx serve -s build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+      "prefer-const": "error",
+      "no-var": "error"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

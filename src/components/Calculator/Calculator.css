@@ -1,0 +1,290 @@
+/**
+ * ENHANCED Calculator Styles with Expression Display
+ * Added back the expression display feature that shows calculations
+ * @author Saurabh Kashyap  
+ * @version 3.3.0 - WITH EXPRESSION DISPLAY
+ */
+
+.calculator.scientific {
+  max-width: 650px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 25px;
+  background: rgba(42, 42, 42, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced Display with Expression */
+.calculator-display {
+  background: #000;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 20px 25px;
+  text-align: right;
+}
+
+.secondary-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #777;
+  min-height: 20px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-indicators {
+  display: flex;
+  gap: 8px;
+  align-self: flex-start;
+}
+
+.angle-unit, .memory-indicator, .second-function {
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.angle-unit.active {
+  background: #ff9f0a;
+  color: white;
+}
+
+.memory-indicator.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.second-function.active {
+  background: #667eea;
+  color: white;
+}
+
+/* EXPRESSION DISPLAY - Shows what you're typing */
+.expression-display {
+  font-size: 14px;
+  color: #aaa;
+  font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+  text-align: right;
+  min-height: 18px;
+  max-height: 36px;
+  overflow-y: auto;
+  word-break: break-all;
+  line-height: 1.3;
+  padding: 4px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 8px;
+  /* Scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.expression-display::-webkit-scrollbar {
+  width: 4px;
+}
+
+.expression-display::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.expression-display::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.display-value {
+  font-size: 36px;
+  font-weight: 200;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* Simple Grid Layout */
+.calculator-keypad.scientific-keypad {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 50px);
+  gap: 10px;
+}
+
+/* Simple button styles */
+.calculator-key {
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.calculator-key:hover {
+  transform: scale(1.05);
+}
+
+.calculator-key:active {
+  transform: scale(0.95);
+}
+
+/* Function keys - Light Gray */
+.key-function {
+  background: #d0d0d0;
+  color: #000;
+  font-weight: 600;
+}
+
+.key-function:hover {
+  background: #e0e0e0;
+}
+
+/* Clear key - Red */
+.key-clear {
+  background: #ff6b6b;
+  color: #fff;
+  font-weight: 700;
+}
+
+.key-clear:hover {
+  background: #ff8a8a;
+}
+
+/* Scientific keys - Blue */
+.key-scientific {
+  background: #4a90e2;
+  color: #fff;
+  font-weight: 500;
+}
+
+.key-scientific:hover {
+  background: #5ba0f2;
+}
+
+.key-scientific.active {
+  background: #667eea;
+}
+
+/* Number keys - Dark Gray */
+.key-number {
+  background: #4a4a4a;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.key-number:hover {
+  background: #5a5a5a;
+}
+
+/* Wide zero button */
+.key-number.wide {
+  grid-column: span 2;
+  justify-content: flex-start;
+  padding-left: 20px;
+  border-radius: 25px;
+}
+
+/* Operator keys - Orange */
+.key-operator {
+  background: #ff9f0a;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.key-operator:hover {
+  background: #ffb143;
+}
+
+/* EQUALS BUTTON - GREEN (as requested) */
+.key-equals {
+  background: #4CAF50;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.key-equals:hover {
+  background: #66BB6A;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calculator.scientific {
+    max-width: 95%;
+    padding: 20px;
+  }
+  
+  .calculator-keypad.scientific-keypad {
+    grid-template-rows: repeat(5, 45px);
+    gap: 8px;
+  }
+  
+  .calculator-key {
+    font-size: 14px;
+  }
+  
+  .key-number {
+    font-size: 16px;
+  }
+  
+  .key-operator, .key-equals {
+    font-size: 16px;
+  }
+  
+  .display-value {
+    font-size: 32px;
+  }
+  
+  .expression-display {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator.scientific {
+    padding: 15px;
+  }
+  
+  .calculator-keypad.scientific-keypad {
+    grid-template-rows: repeat(5, 42px);
+    gap: 6px;
+  }
+  
+  .calculator-key {
+    font-size: 13px;
+  }
+  
+  .key-number {
+    font-size: 15px;
+  }
+  
+  .key-operator, .key-equals {
+    font-size: 15px;
+  }
+  
+  .key-scientific {
+    font-size: 12px;
+  }
+  
+  .display-value {
+    font-size: 28px;
+  }
+  
+  .expression-display {
+    font-size: 11px;
+  }
+}
