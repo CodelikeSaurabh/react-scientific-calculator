@@ -211,56 +211,6 @@ const ScientificCalculator = () => {
     return result;
   };
 
-  // Memory functions
-  const handleMemory = (func) => {
-    const value = parseFloat(display);
-    switch (func) {
-      case 'MC':
-        setMemory(0);
-        break;
-      case 'MR':
-        setDisplay(String(memory));
-        setExpression('Memory: ' + memory); // Show memory recall
-        setWaitingForOperand(true);
-        break;
-      case 'M+':
-        setMemory(memory + value);
-        setExpression(prev => prev + ' → M+'); // Show memory operation
-        break;
-      case 'M-':
-        setMemory(memory - value);
-        setExpression(prev => prev + ' → M-');
-        break;
-      case 'MS':
-        setMemory(value);
-        setExpression(prev => prev + ' → MS');
-        break;
-    }
-  };
-
-  // Add parentheses to expression
-  const addParenthesis = (type) => {
-    const char = type === 'open' ? '(' : ')';
-    setExpression(prev => prev + char);
-  };
-
-  // Toggle sign
-  const toggleSign = () => {
-    if (display !== '0') {
-      const newDisplay = display.charAt(0) === '-' ? display.slice(1) : '-' + display;
-      setDisplay(newDisplay);
-    }
-  };
-
-  // Percentage
-  const percentage = () => {
-    const value = parseFloat(display);
-    const result = value / 100;
-    setDisplay(String(result));
-    setExpression(prev => prev + '% = ' + result);
-    setWaitingForOperand(true);
-  };
-
   // Toggle functions
   const toggleAngleUnit = () => setIsRadians(!isRadians);
   const toggleSecondFunction = () => setIsSecondFunction(!isSecondFunction);
