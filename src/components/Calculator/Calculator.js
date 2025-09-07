@@ -211,25 +211,22 @@ const ScientificCalculator = () => {
     return result;
   };
 
-  // Toggle functions
+  // Utility functions
   const toggleAngleUnit = () => setIsRadians(!isRadians);
   const toggleSecondFunction = () => setIsSecondFunction(!isSecondFunction);
-
-  // Add parentheses to expression
+  
   const addParenthesis = (type) => {
     const char = type === 'open' ? '(' : ')';
     setExpression(prev => prev + char);
   };
-
-  // Toggle sign
+  
   const toggleSign = () => {
     if (display !== '0') {
       const newDisplay = display.charAt(0) === '-' ? display.slice(1) : '-' + display;
       setDisplay(newDisplay);
     }
   };
-
-  // Percentage
+  
   const percentage = () => {
     const value = parseFloat(display);
     const result = value / 100;
